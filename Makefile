@@ -4,7 +4,7 @@ FLAGS = -Wall -Werror
 
 CFLAGS = -c -Wall -Werror
 
-OBJECTS = build/main.o build/generation_alphabet.o
+OBJECTS = build/main.o build/generation_alphabet.o build/generation_password.o
 
 .PHONY: all bin build clean
 
@@ -18,6 +18,9 @@ build/main.o: src/main.cpp
 
 build/generation_alphabet.o: src/generation_alphabet.cpp
 	$(CXX) $(CFLAGS) src/generation_alphabet.cpp -o build/generation_alphabet.o
+
+build/generation_password.o: src/generation_password.cpp
+	$(CXX) $(CFLAGS) src/generation_password.cpp -o build/generation_password.o
 
 build:
 	mkdir -p build
