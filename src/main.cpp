@@ -32,6 +32,7 @@ int main(int argc, char* argv[])
             &large_symbol_flag,
             &special_symbol_flag);
     if (check_return != 0) {
+        cout << "Incorrect argument" << endl;
         return 1;
     }
     check_return = generation_alphabet(

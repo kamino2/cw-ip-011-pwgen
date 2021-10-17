@@ -68,7 +68,6 @@ int handling_main_argument(
         }
     }
     if (i == 1) {
-        cout << "Incorrect argument" << endl;
         return 1;
     }
     return 0;
