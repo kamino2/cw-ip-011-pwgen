@@ -42,7 +42,6 @@ int generation_alphabet(
         *length_alphabet += quantity_special_symbol;
     }
     if (*alphabet == "") {
-        cout << "Empty alphabet for password" << endl;
         return 1;
     }
     return 0;
