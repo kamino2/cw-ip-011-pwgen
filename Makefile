@@ -6,7 +6,7 @@ CFLAGS = -c -Wall -Werror
 
 OBJECTS = build/src/main.o build/src/generation_alphabet.o build/src/generation_password.o build/src/handling_main_argument.o
 
-OBJECTS_TEST = build/test/main.o build/test/tests.o build/src/generation_alphabet.o
+OBJECTS_TEST = build/test/main.o build/test/tests.o build/src/generation_alphabet.o build/src/handling_main_argument.o
 
 .PHONY: all bin build clean test
 
