@@ -1,5 +1,6 @@
 #include "generation_alphabet.h"
 #include "generation_password.h"
+#include "handling_main_argument.h"
 
 #include <cstdio>
 #include <cstdlib>
@@ -21,6 +22,18 @@ int main(int argc, char* argv[])
     bool small_symbol_flag = true;
     bool large_symbol_flag = true;
     bool special_symbol_flag = true;
+    check_return = handling_main_argument(
+            argc,
+            argv,
+            &quantity_password,
+            &length_password,
+            &digit_flag,
+            &small_symbol_flag,
+            &large_symbol_flag,
+            &special_symbol_flag);
+    if (check_return != 0) {
+        return 1;
+    }
     check_return = generation_alphabet(
             &alphabet,
             &length_alphabet,
